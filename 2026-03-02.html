@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日更新 - 2026-03-02</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 100vh; padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #fff; font-size: 2.5em; margin-bottom: 10px; }
+        .date { color: #64ffda; font-size: 1.2em; }
+        .back-link { display: inline-block; color: #64ffda; margin-bottom: 20px; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .section { background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
+        .section-title { font-size: 1.4em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid; }
+        .feature .section-title { color: #27ae60; border-color: #27ae60; }
+        .release .section-title { color: #9b59b6; border-color: #9b59b6; }
+        .contributors .section-title { color: #3498db; border-color: #3498db; }
+        ul { list-style: none; padding-left: 0; }
+        li { padding: 8px 0; padding-left: 25px; position: relative; }
+        li::before { content: '•'; position: absolute; left: 10px; color: #666; font-weight: bold; }
+        .version { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; border-radius: 8px; margin: 10px 0; }
+        .contributor-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .contributor { background: #f8f9fa; padding: 8px 15px; border-radius: 20px; border: 1px solid #dee2e6; }
+        footer { text-align: center; color: rgba(255,255,255,0.6); margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回首页</a>
+        <header>
+            <h1>🔄 OpenClaw 每日更新</h1>
+            <p class="date">📅 2026-03-02</p>
+        </header>
+
+        <div class="section feature">
+            <h2 class="section-title">✨ 新功能</h2>
+            <ul>
+                <li>Thinking 默认值优化: Anthropic Claude 4.6 模型默认使用 adaptive 思维级别</li>
+                <li>Gateway 容器探测增强: 增加 HTTP liveness/readiness 探针</li>
+            </ul>
+        </div>
+
+        <div class="section release">
+            <h2 class="section-title">📦 版本发布</h2>
+            <div class="version">
+                <strong>🎉 v2026.3.1</strong> - 2026-03-02 发布
+            </div>
+            <ul>
+                <li>Claude 4.6 思维级别默认配置</li>
+                <li>Gateway 容器健康检查增强</li>
+            </ul>
+        </div>
+
+        <div class="section contributors">
+            <h2 class="section-title">👥 贡献者</h2>
+            <div class="contributor-list">
+                <span class="contributor">Peter Steinberger</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>📊 数据来源: <a href="https://github.com/openclaw/openclaw" target="_blank" style="color: #64ffda;">GitHub</a></p>
+            <p>🤖 AI 自动整理</p>
+        </footer>
+    </div>
+</body>
+</html>
