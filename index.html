@@ -3,40 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zte_001 的页面</title>
+    <title>OpenClaw 每日更新 - 2026-03-03</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        * {
             margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
         }
         .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
             text-align: center;
-            padding: 40px;
+            margin-bottom: 40px;
         }
         h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
-        p {
+        .date {
+            color: #64ffda;
             font-size: 1.2em;
-            opacity: 0.9;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .section-title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+        }
+        .security .section-title {
+            color: #e74c3c;
+            border-color: #e74c3c;
+        }
+        .bugfix .section-title {
+            color: #f39c12;
+            border-color: #f39c12;
+        }
+        .test .section-title {
+            color: #3498db;
+            border-color: #3498db;
+        }
+        .release .section-title {
+            color: #27ae60;
+            border-color: #27ae60;
+        }
+        .contributors .section-title {
+            color: #9b59b6;
+            border-color: #9b59b6;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 10px;
+            color: #666;
+            font-weight: bold;
+        }
+        .tag {
+            display: inline-block;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-right: 8px;
+        }
+        .tag-security { background: #ffe6e6; color: #c0392b; }
+        .tag-fix { background: #fff3cd; color: #856404; }
+        .tag-feature { background: #d4edda; color: #155724; }
+        .tag-pr {
+            background: #e8f4fd;
+            color: #2980b9;
+            font-size: 0.8em;
+        }
+        .version {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .version strong {
+            font-size: 1.2em;
+        }
+        .contributor-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .contributor {
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #dee2e6;
+        }
+        footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #64ffda;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🌟 欢迎访问</h1>
-        <p>这是 zte_001 为你创建的页面</p>
-        <p id="time"></p>
+        <header>
+            <h1>🔄 OpenClaw 每日更新</h1>
+            <p class="date">📅 2026-03-03</p>
+        </header>
+
+        <div class="section security">
+            <h2 class="section-title">🔐 安全更新</h2>
+            <ul>
+                <li>
+                    <span class="tag tag-security">LINE</span>
+                    LINE 平台认证边界加固，实现账户级别的配对存储访问，严格分离 DM 和群组的白名单边界
+                </li>
+            </ul>
+        </div>
+
+        <div class="section bugfix">
+            <h2 class="section-title">🐛 Bug 修复</h2>
+            <ul>
+                <li>
+                    <span class="tag tag-fix">Telegram</span>
+                    转发纯媒体消息时增加防抖处理，避免消息风暴
+                </li>
+                <li>
+                    <span class="tag tag-fix">Gateway</span>
+                    在 emitChatFinal 前刷新节流的 delta，解决 150ms 节流可能丢失最后一个文本块的问题 (<span class="tag tag-pr">#24856</span>)
+                </li>
+                <li>
+                    <span class="tag tag-fix">飞书</span>
+                    修复 reset hook 类型，secret resolver 超时稳定性提升
+                </li>
+                <li>
+                    <span class="tag tag-fix">ACP</span>
+                    新增 stopReason 传递机制，区分 end_turn 和 max_tokens 终止原因 (<span class="tag tag-pr">#24867</span>)
+                </li>
+                <li>
+                    <span class="tag tag-fix">LINE</span>
+                    修复媒体/认证/路由 webhook 回归问题 (<span class="tag tag-pr">#32546</span>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="section test">
+            <h2 class="section-title">🧪 测试与 CI</h2>
+            <ul>
+                <li>隔离不同 harness 间的模块 mock，避免测试污染</li>
+                <li>Docker doctor 流程支持处理被禁用的 systemd 单元</li>
+                <li>启用 stale workflow 自动标记过期 issue/PR</li>
+                <li>Gateway 模型配置探测稳定性提升</li>
+            </ul>
+        </div>
+
+        <div class="section release">
+            <h2 class="section-title">📦 版本发布</h2>
+            <div class="version">
+                <strong>🎉 v2026.3.2</strong> - 2026-03-03 发布
+            </div>
+            <ul>
+                <li>
+                    <span class="tag tag-feature">Secrets</span>
+                    Secrets/SecretRef 支持扩展到全部 <strong>64 个用户凭据目标</strong>
+                </li>
+                <li>包括运行时收集器、`openclaw secrets` 审计/配置/应用流程</li>
+                <li>新增入职 SecretInput UX</li>
+                <li>未解析的引用现在会快速失败</li>
+            </ul>
+            <br>
+            <div class="version" style="background: linear-gradient(135deg, #a8a8a8 0%, #6c6c6c 100%);">
+                <strong>📋 v2026.3.1</strong> - 2026-03-02
+            </div>
+            <ul>
+                <li>Anthropic Claude 4.6 模型默认使用 `adaptive` 思维级别</li>
+                <li>Gateway 容器探测增加 HTTP liveness/readiness</li>
+            </ul>
+        </div>
+
+        <div class="section contributors">
+            <h2 class="section-title">👥 贡献者</h2>
+            <div class="contributor-list">
+                <span class="contributor">Tak Hoffman</span>
+                <span class="contributor">Viz</span>
+                <span class="contributor">Peter Steinberger</span>
+                <span class="contributor">dongdong</span>
+                <span class="contributor">Shadow</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>📊 数据来源: <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub OpenClaw Repository</a></p>
+            <p>由 AI 自动整理生成</p>
+        </footer>
     </div>
-    <script>
-        document.getElementById('time').textContent = '当前时间: ' + new Date().toLocaleString('zh-CN');
-    </script>
 </body>
 </html>
