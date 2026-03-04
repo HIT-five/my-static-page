@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 每日更新 - 2026-03-04</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #fff; font-size: 2.5em; margin-bottom: 10px; }
+        .date { color: #64ffda; font-size: 1.2em; }
+        .back-link { 
+            display: inline-block; 
+            color: #64ffda; 
+            margin-bottom: 20px; 
+            text-decoration: none;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .section-title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+        }
+        .security .section-title { color: #e74c3c; border-color: #e74c3c; }
+        .bugfix .section-title { color: #f39c12; border-color: #f39c12; }
+        .test .section-title { color: #3498db; border-color: #3498db; }
+        .release .section-title { color: #27ae60; border-color: #27ae60; }
+        .contributors .section-title { color: #9b59b6; border-color: #9b59b6; }
+        ul { list-style: none; padding-left: 0; }
+        li { padding: 8px 0; padding-left: 25px; position: relative; }
+        li::before { content: '•'; position: absolute; left: 10px; color: #666; font-weight: bold; }
+        .tag {
+            display: inline-block;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-right: 8px;
+        }
+        .tag-security { background: #ffe6e6; color: #c0392b; }
+        .tag-fix { background: #fff3cd; color: #856404; }
+        .tag-feature { background: #d4edda; color: #155724; }
+        .version {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .contributor-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .contributor {
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #dee2e6;
+        }
+        footer { text-align: center; color: rgba(255,255,255,0.6); margin-top: 40px; }
+        a { color: #64ffda; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回首页</a>
+        <header>
+            <h1>🔄 OpenClaw 每日更新</h1>
+            <p class="date">📅 2026-03-04</p>
+        </header>
+
+        <div class="section security">
+            <h2 class="section-title">🔐 安全更新</h2>
+            <ul>
+<li>feat(gateway): add Permissions-Policy header to default security headers (#30186) <small>(habakan)</small></li>
+<li>Security audit: suggest valid gateway.nodes.denyCommands entries (#29713) <small>(liquidhorizon88-bot)</small></li>
+<li>fix(security): strip partial API token from status labels (#33262) <small>(Cui Chen)</small></li>
+<li>docs: fix Mintlify-incompatible links in security docs (#27698) <small>(Clawdoo)</small></li>
+<li>security: add X-Content-Type-Options nosniff header to media route (#30356) <small>(13otKmdr)</small></li>
+</ul></div>
+
+        <div class="section bugfix">
+            <h2 class="section-title">🐛 Bug 修复</h2>
+            <ul>
+<li>build: fix ineffective dynamic imports with lazy boundaries (#33690) <small>(Gustavo Madeira Santana)</small></li>
+<li>fix(plugins): lazily initialize runtime and split plugin-sdk startup imports (#28620) <small>(Igal Tabachnik)</small></li>
+<li>fix(ios): harden watch messaging activation concurrency (#33306) <small>(Mariano)</small></li>
+<li>fix(ios): start incremental speech at soft boundaries (#33305) <small>(Mariano)</small></li>
+<li>fix(ios): guard talk TTS callbacks to active utterance (#33304) <small>(Mariano)</small></li>
+<li>fix(logging ): use local timezone for console log timestamps (#25970) <small>(wangchunyue)</small></li>
+<li>fix(gateway): include disk-scanned agent IDs in listConfiguredAgentIds (#32831) <small>(Sid)</small></li>
+</ul></div>
+
+        <div class="section release">
+            <h2 class="section-title">📦 版本发布</h2>
+<div class="version">
+                <strong>v2026.3.2</strong> - openclaw 2026.3.2
+            </div>
+<div class="version">
+                <strong>v2026.3.2-beta.1</strong> - openclaw 2026.3.2-beta.1
+            </div>
+<div class="version">
+                <strong>v2026.3.1</strong> - openclaw 2026.3.1
+            </div>
+</div>
+
+        <footer>
+            <p>📊 数据来源: <a href="https://github.com/openclaw/openclaw" target="_blank">GitHub</a></p>
+            <p>🤖 AI 自动整理</p>
+        </footer>
+    </div>
+</body>
+</html>
