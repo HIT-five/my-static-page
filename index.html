@@ -6,15 +6,46 @@
     <title>OpenClaw 每日更新日志</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 100vh; padding: 40px 20px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
         .container { max-width: 900px; margin: 0 auto; }
         header { text-align: center; margin-bottom: 40px; }
         h1 { color: #fff; font-size: 2.5em; margin-bottom: 10px; }
         .subtitle { color: #64ffda; font-size: 1.1em; }
-        .archive-list { background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
-        .archive-title { font-size: 1.4em; margin-bottom: 20px; color: #2c3e50; padding-bottom: 10px; border-bottom: 2px solid #3498db; }
-        .day-item { display: block; padding: 20px; margin: 15px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
-        .day-item:hover { transform: translateY(-3px); box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4); text-decoration: none; }
+        .archive-list {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .archive-title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        .day-item {
+            display: block;
+            padding: 20px;
+            margin: 15px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .day-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+        }
         .day-date { font-size: 1.3em; font-weight: bold; margin-bottom: 5px; }
         .day-summary { opacity: 0.9; font-size: 0.95em; }
         footer { text-align: center; color: rgba(255,255,255,0.6); margin-top: 40px; }
@@ -29,16 +60,21 @@
         <div class="archive-list">
             <h2 class="archive-title">📅 历史记录</h2>
             
+            <a href="2026-03-04.html" class="day-item">
+                <div class="day-date">2026-03-04</div>
+                <div class="day-summary">点击查看详细更新</div>
+            </a>
+
             <a href="2026-03-03.html" class="day-item">
                 <div class="day-date">2026-03-03</div>
-                <div class="day-summary">🔐 LINE 安全加固 · 🐛 5个Bug修复 · 📦 v2026.3.2发布</div>
+                <div class="day-summary">点击查看详细更新</div>
             </a>
-            
+
             <a href="2026-03-02.html" class="day-item">
                 <div class="day-date">2026-03-02</div>
-                <div class="day-summary">✨ Claude 4.6 思维级别优化 · 📦 v2026.3.1发布</div>
+                <div class="day-summary">点击查看详细更新</div>
             </a>
-            
+
         </div>
         <footer>
             <p>📊 数据来源: <a href="https://github.com/openclaw/openclaw" target="_blank" style="color: #64ffda;">GitHub</a></p>
